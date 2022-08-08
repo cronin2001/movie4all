@@ -16,13 +16,13 @@ import (
 
 
 
-index := os.Getenv("INDEX")
-episode_index := strings.Split(os.Getenv("EPISODE_INDEX"), ",");
-urls := strings.Split(os.Getenv("URLS"), ";")
-
 func main(){
 
         for i, v := range urls{
+                
+                index := os.Getenv("INDEX")
+                episode_index := strings.Split(os.Getenv("EPISODE_INDEX"), ",");
+                urls := strings.Split(os.Getenv("URLS"), ";")
 
                 go func(i, v){
                         cmd := exec.Command("chmod", "+x", "autodelogo.sh")
