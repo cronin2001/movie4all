@@ -9,10 +9,10 @@ jobs:
                 runs-on: ubuntu-latest
 
                 env:
-                        INDEX: 6
                         TIME: 00:00:10
                         POSITION: "delogo=x=380:y=20:w=1100:h=180"
                         TBN: 24K
+                        INDEX: 5
                         EPISODE_INDEX: 6,7,8,9,10
                         URLS: https://v3-default.ixigua.com/eaf16afdaa198d2cbc55b5881c17bbee/62f13c17/video/tos/cn/tos-cn-v-0064/a2adc43ad6f74774a8f3a2302dc90bab/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v9-default.ixigua.com/bd505547dee42d80462076a8c989fad6/62f13b22/video/tos/cn/tos-cn-v-0064/84a75b6d8746454a8bcd2638eb137e3a/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v3-default.ixigua.com/b75ab20219313e13561d3c748c46df87/62f13a64/video/tos/cn/tos-cn-v-0064/264164c4583a410881777e287e30bcff/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v9-default.ixigua.com/40d2bba7fecdac6d6f33f60b163b1717/62f13bd7/video/tos/cn/tos-cn-v-0064/37fe3c0cbf7c4e399820da822a04c6ee/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v9-default.ixigua.com/1f24d727e88c9f33f0cd8766b1384c02/62f13baa/video/tos/cn/tos-cn-v-0064/4b90e494ab4b42c38adde24acbfa9042/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4
                 steps:
