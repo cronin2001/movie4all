@@ -28,7 +28,7 @@ func main(){
 
         for i, v := range urls{
 
-                go func(i, v){
+                go func(i int, v string){
                         cmd := exec.Command("chmod", "+x", "autodelogo.sh")
                         cmd.Run()
 
