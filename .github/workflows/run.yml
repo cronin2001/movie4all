@@ -11,7 +11,7 @@ jobs:
                 env:
                         INDEX: 6
                         TIME: 00:00:10
-                        POSITION: "delogo=x=380:y=25:w=1100:h=170"
+                        POSITION: "delogo=x=380:y=20:w=1100:h=180"
                         TBN: 24K
                         URLS: https://v9-default.ixigua.com/0ac6af4861a411f8fe6896bf70b6f050/62f13530/video/tos/cn/tos-cn-v-0064/6f0b1fd7802b47d584f213b77154465f/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v6-default.ixigua.com/e64dda0cba9d443c7160384d49903b18/62f13544/video/tos/cn/tos-cn-v-0064/74cdea7dda8a4ad1a1f7735b69e2d803/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v26-default.ixigua.com/a6c531b657d84b58a5cbc739e787d6c6/62f1346b/video/tos/cn/tos-cn-v-0064/f4c9e902a5c641dbaa3d99196d1b9a44/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://07telbpv4j2ecbegp5u51ncpar9e554bvtlln3tpg28uus89vesfveqi.tt.x.bsgslb.cn/xdispatch70f053923d9c3218/v9-default.ixigua.com/10d1ef4896d333db52d5b85342dab7ea/62f13587/video/tos/cn/tos-cn-v-0064/e874e05e46a7494b936e248d075ddcfc/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4&bsxdisp=paco;https://v26-default.ixigua.com/378845b19d10614cf165c058e2ad22e6/62f134c4/video/tos/cn/tos-cn-v-0064/0ac5f5109bc346de83aa238a0e37c845/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v9-default.ixigua.com/57164582d81c3e43dac161eb9dbf80fe/62f13638/video/tos/cn/tos-cn-v-0064/88c8f5d8fa0d4b78bbdc626c43b34728/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4
 
