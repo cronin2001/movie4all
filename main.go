@@ -15,9 +15,9 @@ import (
 )
 
 var (
-        index
-        episode_index
-        urls
+        index string
+        episode_index []string
+        urls []string
 )
 
 func main(){
