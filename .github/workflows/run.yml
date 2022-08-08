@@ -2,29 +2,29 @@ name: CI-movie4all
 
 
 on:
-        workflow_diapatch:
+        workflow_dispatch:
 
 jobs:
         build:
                 runs-on: ubuntu-lates
 
-        env:
-                INDEX: 5
-                URLS: https://v3-default.ixigua.com/154ad0ce093e650b1144e2851f64db59/62f12b7a/video/tos/cn/tos-cn-v-0064/6f0b1fd7802b47d584f213b77154465f/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v9-default.ixigua.com/452a6a122853e5871fab86b1affd09b6/62f12cdc/video/tos/cn/tos-cn-v-0064/74cdea7dda8a4ad1a1f7735b69e2d803/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4
-                TIME: 00:00:10
-                POSITION: "delogo=x=432:y=44:w=1060:h=108"
-                TBN: 24K
+                env:
+                        INDEX: 5
+                        URLS: https://v3-default.ixigua.com/154ad0ce093e650b1144e2851f64db59/62f12b7a/video/tos/cn/tos-cn-v-0064/6f0b1fd7802b47d584f213b77154465f/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v9-default.ixigua.com/452a6a122853e5871fab86b1affd09b6/62f12cdc/video/tos/cn/tos-cn-v-0064/74cdea7dda8a4ad1a1f7735b69e2d803/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4
+                        TIME: 00:00:10
+                        POSITION: "delogo=x=432:y=44:w=1060:h=108"
+                        TBN: 24K
 
-        steps:
-        - name: setup go
-        - uses: actions/checkout@v2
-          with:
-                go-version: `1.16.0`
-        - name: install dependencied
-          run: |
-                go mod init movie
-                go mod tidy
-        - name: install ffmpeg
-          run: sudo apt install ffmpeg -y
-        - name: Run
-          run: go run main.go
+                steps:
+                - name: setup go
+                - uses: actions/checkout@v2
+                  with:
+                        go-version: '1.16.0'
+                - name: install dependencied
+                  run: |
+                        go mod init movie
+                        go mod tidy
+                - name: install ffmpeg
+                  run: sudo apt install ffmpeg -y
+                - name: Run
+                  run: go run main.go
