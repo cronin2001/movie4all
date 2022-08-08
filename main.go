@@ -17,7 +17,7 @@ func main(){
 
 
         index := os.Getenv("INDEX")
-
+        episode_index := strings.Split(os.Getenv("EPISODE_INDEX"), ",");
         urls := strings.Split(os.Getenv("URLS"), ";")
 
         for i, v := range urls{
@@ -48,7 +48,7 @@ func main(){
                         log.Fatal(err)
                 }
 
-                if _, err := db.Exec(`INSERT INTO detail_table(index, episode_index, episode_url) VALUES($1, $2, $3)`, index, i+1, fmt.Sprintf("%v", cid)); err != nil{
+                if _, err := db.Exec(`INSERT INTO detail_table(index, episode_index, episode_url) VALUES($1, $2, $3)`, index, episode_index[i], fmt.Sprintf("%v", cid)); err != nil{
                         log.Fatal(err)
                 }
         }
