@@ -11,8 +11,6 @@ import (
         "log"
         "time"
         "io/ioutil"
-        "io"
-        "bufio"
 
         _ "github.com/lib/pq"
 )
@@ -34,24 +32,8 @@ func main(){
 
                 go func(i int, v string){
 
-                        cmd := exec.Command("wget", "-O", "download.mp4", v)
-                        stdout, err := cmd.StdoutPipe()
-                        if err != nil{
-                                log.Fatal(err)
-                        }
-                        go func(){
-                                reader := bufio.NewReader(stdout)
-                                for{
-                                        line, err := reader.ReadString('\n')
-                                        if err != nil || err == io.EOF{
-                                                return
-                                        }
-                                        fmt.Println(line)
-                                }
-                        }()
-                        cmd.Run()
 
-                        cmd = exec.Command("chmod", "+x", "autodelogo.sh")
+                        cmd := exec.Command("chmod", "+x", "autodelogo.sh")
                         cmd.Run()
 
                         cmd = exec.Command("bash", "autodelogo.sh", v)
@@ -89,7 +71,7 @@ func main(){
                 }(i, v)
 
                 select{
-                        case <- time.After(time.Second*900):
+                        case <- time.After(time.Second*800):
                                 continue
                 }
         }
