@@ -13,9 +13,8 @@ jobs:
                         POSITION: "delogo=x=380:y=10:w=1100:h=200"
                         TBN: 24K
                         INDEX: 7
-                        EPISODE_INDEX: 7,8,9
-                        URLS: https://v26-default.ixigua.com/4d878638234691a3bd2162f046278507/62f1f6f9/video/tos/cn/tos-cn-v-0064/a7ecca49ce914638b78f153529df414b/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v3-default.ixigua.com/176af2d9272ad2457195d3d4a15c2ccb/62f1f87f/video/tos/cn/tos-cn-v-0064/f7db0e5c3c2e4c38bb133d43278495cc/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v26-default.ixigua.com/0a4f826229e08b243a640b1270fdc1cd/62f1f38a/video/tos/cn/tos-cn-v-0064/1461edb56dae4a38bea2069d26af037e/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4
-
+                        EPISODE_INDEX: 8,9
+                        URLS: https://v3-default.ixigua.com/176af2d9272ad2457195d3d4a15c2ccb/62f1f87f/video/tos/cn/tos-cn-v-0064/f7db0e5c3c2e4c38bb133d43278495cc/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v26-default.ixigua.com/0a4f826229e08b243a640b1270fdc1cd/62f1f38a/video/tos/cn/tos-cn-v-0064/1461edb56dae4a38bea2069d26af037e/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
