@@ -22,10 +22,12 @@ var (
         episode_index []string
         urls []string
         proxies []string
+        useragent = `--user-agent="PostmanRuntime/7.29.2"`
+        header = `--header="Cookie: womginx_are_you_a_bot=no"`
 )
 
 
-func gettbn()string{
+func gettbn()(string, error){
         ctx, cancelFn := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancelFn()
 
@@ -38,6 +40,10 @@ func gettbn()string{
 	if err != nil {
 		log.Printf("Error getting data: %v", err)
 	}
+
+        if data == nil{
+                return "", fmt.Errorf("empty response")
+        }
 
 	tbn := strings.Split(data.Streams[0].TimeBase, "/")
 	return tbn[1]
@@ -64,13 +70,16 @@ func main(){
 
                         fmt.Println(url)
 
-                        cmd := exec.Command("wget", "--limit-rate", "3m", "-O", "download.mp4", url)
+                        cmd := exec.Command("wget", useragent, header, "--limit-rate", "3m", "-O", "download.mp4", url)
                         cmd.Run()
 
                         cmd = exec.Command("chmod", "+x", "autodelogo.sh")
                         cmd.Run()
 
-                        tbn := gettbn()
+                        tbn, err := gettbn()
+                        if err != nil{
+                                return
+                        }
 
                         cmd = exec.Command("bash", "autodelogo.sh", tbn)
                         cmd.Run()
