@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget --timeout=15 --user-agent="PostmanRuntime/7.29.2" --header="Cookie: womginx_are_you_a_bot=no" --limit-rate 3m -o download.mp4 $1
+wget --timeout=15 --user-agent="PostmanRuntime/7.29.2" --header="Cookie: womginx_are_you_a_bot=no" --limit-rate 3m -O download.mp4 $1
 
 echo ------------------spliting------------------------
 #00:00:00
