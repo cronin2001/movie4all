@@ -68,7 +68,7 @@ func main(){
 
                 fmt.Println(url)
 
-                cmd := exec.Command("wget", "--timeout=15" useragent, header, "--limit-rate", "3m", "-O", "download.mp4", url)
+                cmd := exec.Command("wget", "--timeout=15", useragent, header, "--limit-rate", "3m", "-O", "download.mp4", url)
                 cmd.Run()
 
                 fileinfo, err := os.Stat("download.mp4")
