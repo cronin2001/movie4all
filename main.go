@@ -11,6 +11,7 @@ import (
         "log"
         "time"
         "io/ioutil"
+        "gopkg.in/vansante/go-ffprobe.v2"
 
         _ "github.com/lib/pq"
 )
@@ -20,6 +21,26 @@ var (
         episode_index []string
         urls []string
 )
+
+
+func gettbn()string{
+        ctx, cancelFn := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancelFn()
+
+	fileReader, err := os.Open("download.mp4")
+	if err != nil {
+		log.Panicf("Error opening test file: %v", err)
+	}
+
+	data, err := ffprobe.ProbeReader(ctx, fileReader)
+	if err != nil {
+		log.Panicf("Error getting data: %v", err)
+	}
+
+	tbn := strings.Split(data.Streams[0].TimeBase, "/")
+	return tbn[1]
+}
+
 
 func main(){
 
@@ -32,11 +53,15 @@ func main(){
 
                 go func(i int, v string){
 
-
-                        cmd := exec.Command("chmod", "+x", "autodelogo.sh")
+                        cmd := exec.Command("wget", "-O", "download.mp4", v)
                         cmd.Run()
 
-                        cmd = exec.Command("bash", "autodelogo.sh", v)
+                        cmd = exec.Command("chmod", "+x", "autodelogo.sh")
+                        cmd.Run()
+
+                        tbn := gettbn()
+
+                        cmd = exec.Command("bash", "autodelogo.sh", tbn)
                         cmd.Run()
 
 
