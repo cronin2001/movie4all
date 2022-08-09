@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget --timeout=15 -O download.mp4 $1
+wget -O download.mp4 $1
 
 echo ------------------spliting------------------------
 #00:00:00
