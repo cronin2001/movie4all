@@ -60,7 +60,7 @@ func main(){
 	                randIdx := rand.Intn(len(proxies))
 	                proxy := proxies[randIdx]
 
-                        url := `https://`+proxy+`/main/`+v
+                        url := `https://`+proxy+`.herokuapp.com`+`/main/`+v
 
                         fmt.Println(url)
 
