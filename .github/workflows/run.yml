@@ -11,6 +11,7 @@ jobs:
                 env:
                         PROXIES: movie4all-proxy1;movie4all-proxy2;movie4all-proxy3;movie4all-proxy4;movie4all-proxy5
                         TIME: 00:00:10
+                        TBN: 16K
                         POSITION: "delogo=x=380:y=10:w=1100:h=200"
                         INDEX: 12
                         EPISODE_INDEX: 1,2,3,4,5,6
