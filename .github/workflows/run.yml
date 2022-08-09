@@ -10,11 +10,11 @@ jobs:
 
                 env:
                         TIME: 00:00:10
-                        POSITION: "delogo=x=380:y=20:w=1100:h=180"
+                        POSITION: "delogo=x=380:y=10:w=1100:h=200"
                         TBN: 24K
                         INDEX: 7
-                        EPISODE_INDEX: 3,4,5,6,7,8,9
-                        URLS: https://v3-default.ixigua.com/12f3af917e0861389016e94d9171a195/62f144e9/video/tos/cn/tos-cn-v-0064/65eadd8eef4240568fac79ad329bfc45/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://osuemg0keqb95cb2cf1ktqc5ntsh3m1a40tni51058bmv6ctk61fubde.tt.x.bsgslb.cn/xdispatch70f05392d35b4c3c/v9-default.ixigua.com/6cd270541a420b61d44e596039b964b3/62f142e3/video/tos/cn/tos-cn-v-0064/70abbb865d7649b697e609d25f538579/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4&bsxdisp=paco;https://v6-default.ixigua.com/247542d29881512699a5872dc10cdfe4/62f145a7/video/tos/cn/tos-cn-v-0064/ca04a5d92c2143e1b40f6f26cb221d5f/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v26-default.ixigua.com/92da87c9fc76950c6fdc22168379e956/62f14513/video/tos/cn/tos-cn-v-0064/b82cf4259c214708bf8309586e18a5d6/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://n6bgdd4uuj7gg00aakbjm26v1mflbsvareiofdcssc5fh9detpevudta.tt.x.bsgslb.cn/xdispatch70f05392d35b4c3c/v9-default.ixigua.com/e1a41f0faa70e5f9ae12f5c624413bab/62f142c1/video/tos/cn/tos-cn-v-0064/a7ecca49ce914638b78f153529df414b/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4&bsxdisp=paco;https://v6-default.ixigua.com/98b76532cb8137bdde6194557b6237f6/62f144d8/video/tos/cn/tos-cn-v-0064/f7db0e5c3c2e4c38bb133d43278495cc/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v26-default.ixigua.com/5dbe71f4286fd3f01b8be9adae89bd74/62f141fb/video/tos/cn/tos-cn-v-0064/1461edb56dae4a38bea2069d26af037e/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4
+                        EPISODE_INDEX: 7,8,9
+                        URLS: https://v26-default.ixigua.com/4d878638234691a3bd2162f046278507/62f1f6f9/video/tos/cn/tos-cn-v-0064/a7ecca49ce914638b78f153529df414b/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v3-default.ixigua.com/176af2d9272ad2457195d3d4a15c2ccb/62f1f87f/video/tos/cn/tos-cn-v-0064/f7db0e5c3c2e4c38bb133d43278495cc/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v26-default.ixigua.com/0a4f826229e08b243a640b1270fdc1cd/62f1f38a/video/tos/cn/tos-cn-v-0064/1461edb56dae4a38bea2069d26af037e/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4
 
                 steps:
                 - name: setup go
