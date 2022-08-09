@@ -71,7 +71,7 @@ func main(){
                 cmd := exec.Command("wget", "--timeout=15", useragent, header, "--limit-rate", "3m", "-O", "download.mp4", url)
                 cmd.Run()
 
-                fileinfo, err := os.Stat("download.mp4")
+                _, err := os.Stat("download.mp4")
                 if os.IsNotExist(err){
                         log.Println("File not exist.")
                         continue
