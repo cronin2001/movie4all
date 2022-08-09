@@ -64,7 +64,7 @@ func main(){
 
                 url := `https://`+proxy+`.herokuapp.com`+`/main/`+v
 
-                cmd = exec.Command("chmod", "+x", "autodelogo.sh")
+                cmd := exec.Command("chmod", "+x", "autodelogo.sh")
                 cmd.Run()
 
                 tbn, err := gettbn()
