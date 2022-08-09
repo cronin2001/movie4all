@@ -63,8 +63,8 @@ func main(){
                 cmd = exec.Command("wget", "-O", "download.mp4", v)
                 cmd.Run()
 
-                cmd = exec.Command("ls", "-la")
-                cmd.Run()
+                out, _ = exec.Command("ls", "-la").Output()
+                log.Println(string(out))
 
                 tbn, err := gettbn()
                 if err != nil{
