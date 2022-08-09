@@ -46,7 +46,7 @@ func gettbn()(string, error){
         }
 
 	tbn := strings.Split(data.Streams[0].TimeBase, "/")
-	return tbn[1]
+	return tbn[1], nil
 }
 
 
