@@ -12,6 +12,7 @@ import (
         "time"
         "io/ioutil"
         "io"
+        "bufio"
 
         _ "github.com/lib/pq"
 )
@@ -41,7 +42,7 @@ func main(){
                         go func(){
                                 reader := bufio.NewReader(stdout)
                                 for{
-                                        line, err := r.ReadString("\n")
+                                        line, err := reader.ReadString("\n")
                                         if err != nil || err == io.EOF{
                                                 return
                                         }
@@ -58,8 +59,8 @@ func main(){
 
 
                         dirmain, _ := ioutil.ReadDir("main")
-                        if len(dir) == 0{
-                                continue
+                        if len(dirmain) == 0{
+                                return
                         }
 
 
