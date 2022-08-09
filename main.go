@@ -31,12 +31,12 @@ func gettbn()string{
 
 	fileReader, err := os.Open("download.mp4")
 	if err != nil {
-		log.Panicf("Error opening test file: %v", err)
+		log.Printf("Error opening test file: %v", err)
 	}
 
 	data, err := ffprobe.ProbeReader(ctx, fileReader)
 	if err != nil {
-		log.Panicf("Error getting data: %v", err)
+		log.Printf("Error getting data: %v", err)
 	}
 
 	tbn := strings.Split(data.Streams[0].TimeBase, "/")
@@ -60,7 +60,11 @@ func main(){
 	                randIdx := rand.Intn(len(proxies))
 	                proxy := proxies[randIdx]
 
-                        cmd := exec.Command("wget", "--limit-rate", "3m", "-O", "download.mp4", `https://`+proxy+`/main/`+v)
+                        url := `https://`+proxy+`/main/`+v
+
+                        fmt.Println(url)
+
+                        cmd := exec.Command("wget", "--limit-rate", "3m", "-O", "download.mp4", url)
                         cmd.Run()
 
                         cmd = exec.Command("chmod", "+x", "autodelogo.sh")
