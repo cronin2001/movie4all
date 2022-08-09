@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-wget -O download.mp4 $1
-
 echo ------------------spliting------------------------
 #00:00:00
 ffmpeg -i download.mp4 -vcodec copy -acodec copy -t $TIME tmp1.mp4
@@ -15,7 +12,7 @@ echo ------------------delogoing------------------------
 ffmpeg -i tmp1.mp4 -vf $POSITION -c:a copy tmp3.mp4
 
 echo ------------------forcetbn-------------------------
-ffmpeg -i tmp3.mp4 -strict -2 -video_track_timescale $TBN tmp4.mp4
+ffmpeg -i tmp3.mp4 -strict -2 -video_track_timescale $1 tmp4.mp4
 
 echo ------------------merging------------------------
 echo file tmp4.mp4 > mylist.txt && echo file tmp2.mp4 >> mylist.txt
