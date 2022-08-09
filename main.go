@@ -12,7 +12,6 @@ import (
         "time"
         "io/ioutil"
         "gopkg.in/vansante/go-ffprobe.v2"
-        "math/rand"
 
         _ "github.com/lib/pq"
 )
@@ -21,7 +20,6 @@ var (
         index string
         episode_index []string
         urls []string
-        proxies []string
 )
 
 
@@ -53,16 +51,9 @@ func main(){
         index = os.Getenv("INDEX")
         episode_index = strings.Split(os.Getenv("EPISODE_INDEX"), ",");
         urls = strings.Split(os.Getenv("URLS"), ";")
-        proxies = strings.Split(os.Getenv("PROXIES"), ";")
 
 
         for i, v := range urls{
-
-                rand.Seed(time.Now().UnixNano())
-	        randIdx := rand.Intn(len(proxies))
-	        proxy := proxies[randIdx]
-
-                url := `https://`+proxy+`.herokuapp.com`+`/main/`+v
 
                 cmd := exec.Command("chmod", "+x", "autodelogo.sh")
                 cmd.Run()
@@ -72,7 +63,7 @@ func main(){
                         continue
                 }
 
-                cmd = exec.Command("bash", "autodelogo.sh", url, tbn)
+                cmd = exec.Command("bash", "autodelogo.sh", v, tbn)
                 cmd.Run()
 
 
