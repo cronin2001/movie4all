@@ -12,9 +12,9 @@ jobs:
                         TIME: 00:00:10
                         POSITION: "delogo=x=380:y=10:w=1100:h=200"
                         TBN: 24K
-                        INDEX: 7
-                        EPISODE_INDEX: 8,9
-                        URLS: https://v3-default.ixigua.com/176af2d9272ad2457195d3d4a15c2ccb/62f1f87f/video/tos/cn/tos-cn-v-0064/f7db0e5c3c2e4c38bb133d43278495cc/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v26-default.ixigua.com/0a4f826229e08b243a640b1270fdc1cd/62f1f38a/video/tos/cn/tos-cn-v-0064/1461edb56dae4a38bea2069d26af037e/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4
+                        INDEX: 8
+                        EPISODE_INDEX: 1,2,3,4,5,6,7
+                        URLS: https://v3-default.ixigua.com/4f5d3ad8acdcbb17c0422303a45f1471/62f1fe54/video/tos/cn/tos-cn-v-0064/6bbb8a06717446428eaa9b8b8333c5da/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v26-default.ixigua.com/13d2b406c9df091cac6f111697093444/62f1ff62/video/tos/cn/tos-cn-v-0064/f64286d4704e48508550b0d944422fe4/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v26-default.ixigua.com/db823bd1bbe695f7a64b440b050d8b0e/62f1ff53/video/tos/cn/tos-cn-v-0064/799ed0fdeb374538acd6aec914fb4477/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://sanr08np3qm0csudplb5qu288t6ntpu41t3mqedsuhss1h8qsslfunjd.tt.x.bsgslb.cn/xdispatch70f053928bd790bd/v9-default.ixigua.com/9ba0a9072dbaac26aad870f24d2d7902/62f1ff98/video/tos/cn/tos-cn-v-0064/d9df8f6249ea4b96a5f79592d15e931b/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4&bsxdisp=paco;https://v6-default.ixigua.com/6d1263770c08a5b2d4f49cfce1cf0ca6/62f1ffa6/video/tos/cn/tos-cn-v-0064/7ef38548b7ca4a738c6e55a44dc7572b/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://vh95j1k59gaqnrh30q5smvbbf90jqkbimajvm9eejp8m3j9b8dtfvple.tt.x.bsgslb.cn/xdispatch70f053928bd790bd/v9-default.ixigua.com/911b4ee0554b4343dd95744aa906962c/62f1ff7b/video/tos/cn/tos-cn-v-0064/e74ce8655d96472fa90ce4b167d5a624/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4&bsxdisp=paco;https://v26-default.ixigua.com/585fc279c4d93f08b164aa01fdb134c7/62f204e8/video/tos/cn/tos-cn-v-0064/7f8b1d79ac3c41e7ac7aa4f6e475ff5c/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
