@@ -73,7 +73,7 @@ func main(){
                 cmd = exec.Command("bash", "autodelogo.sh", tbn)
                 cmd.Run()
 
-                out, _ := exec.Command("ls", "-la").Output()
+                out, _ := exec.Command("ls", "-la", "main").Output()
                 log.Println(string(out))
 
 
