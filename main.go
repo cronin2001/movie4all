@@ -63,8 +63,6 @@ func main(){
                 cmd = exec.Command("wget", "-O", "download.mp4", v)
                 cmd.Run()
 
-                out, _ := exec.Command("ls", "-la").Output()
-                log.Println(string(out))
 
                 tbn, err := gettbn()
                 if err != nil{
@@ -72,7 +70,11 @@ func main(){
                 }
                 log.Printf("the current tbn is: %s", tbn)
 
-                exec.Command("bash", "autodelogo.sh", tbn).Output()
+                cmd = exec.Command("bash", "autodelogo.sh", tbn)
+                cmd.Run()
+
+                out, _ := exec.Command("ls", "-la").Output()
+                log.Println(string(out))
 
 
                 dirmain, _ := ioutil.ReadDir("main")
