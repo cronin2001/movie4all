@@ -22,8 +22,6 @@ var (
         episode_index []string
         urls []string
         proxies []string
-        useragent = `--user-agent="PostmanRuntime/7.29.2"`
-        header = `--header="Cookie: womginx_are_you_a_bot=no"`
 )
 
 
@@ -66,17 +64,6 @@ func main(){
 
                 url := `https://`+proxy+`.herokuapp.com`+`/main/`+v
 
-                fmt.Println(url)
-
-                cmd := exec.Command("wget", "--timeout=15", useragent, header, "--limit-rate", "3m", "-O", "download.mp4", url)
-                cmd.Run()
-
-                _, err := os.Stat("download.mp4")
-                if os.IsNotExist(err){
-                        log.Println("File not exist.")
-                        continue
-                }
-
                 cmd = exec.Command("chmod", "+x", "autodelogo.sh")
                 cmd.Run()
 
@@ -85,7 +72,7 @@ func main(){
                         continue
                 }
 
-                cmd = exec.Command("bash", "autodelogo.sh", tbn)
+                cmd = exec.Command("bash", "autodelogo.sh", url, tbn)
                 cmd.Run()
 
 
@@ -116,7 +103,7 @@ func main(){
 
                 if _, err := db.Exec(`INSERT INTO detail_table(index, episode_index, episode_url) VALUES($1, $2, $3)`, index, episode_index[i], fmt.Sprintf("%v", cid)); err != nil{
                         log.Fatal(err)
-                }           
+                }
 
         }
 }
