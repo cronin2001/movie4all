@@ -42,7 +42,7 @@ func main(){
                         go func(){
                                 reader := bufio.NewReader(stdout)
                                 for{
-                                        line, err := reader.ReadString("\n")
+                                        line, err := reader.ReadString('\n')
                                         if err != nil || err == io.EOF{
                                                 return
                                         }
