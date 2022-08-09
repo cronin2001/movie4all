@@ -12,6 +12,7 @@ import (
         "time"
         "io/ioutil"
         "gopkg.in/vansante/go-ffprobe.v2"
+        "math/rand"
 
         _ "github.com/lib/pq"
 )
@@ -20,6 +21,7 @@ var (
         index string
         episode_index []string
         urls []string
+        proxies []string
 )
 
 
@@ -47,13 +49,18 @@ func main(){
         index = os.Getenv("INDEX")
         episode_index = strings.Split(os.Getenv("EPISODE_INDEX"), ",");
         urls = strings.Split(os.Getenv("URLS"), ";")
+        proxies = strings.Split(os.Getenv("PROXIES"), ";")
 
 
         for i, v := range urls{
 
                 go func(i int, v string){
 
-                        cmd := exec.Command("wget", "-O", "download.mp4", v)
+                        rand.Seed(time.Now().UnixNano())
+	                randIdx := rand.Intn(len(proxies))
+	                proxy := proxies[randIdx]
+
+                        cmd := exec.Command("wget", "--limit-rate", "3m", "-O", "download.mp4", `https://`+proxy+`/main/`+v)
                         cmd.Run()
 
                         cmd = exec.Command("chmod", "+x", "autodelogo.sh")
