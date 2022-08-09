@@ -60,64 +60,63 @@ func main(){
 
         for i, v := range urls{
 
-                go func(i int, v string){
+                rand.Seed(time.Now().UnixNano())
+	        randIdx := rand.Intn(len(proxies))
+	        proxy := proxies[randIdx]
 
-                        rand.Seed(time.Now().UnixNano())
-	                randIdx := rand.Intn(len(proxies))
-	                proxy := proxies[randIdx]
+                url := `https://`+proxy+`.herokuapp.com`+`/main/`+v
 
-                        url := `https://`+proxy+`.herokuapp.com`+`/main/`+v
+                fmt.Println(url)
 
-                        fmt.Println(url)
+                cmd := exec.Command("wget", "--timeout=15" useragent, header, "--limit-rate", "3m", "-O", "download.mp4", url)
+                cmd.Run()
 
-                        cmd := exec.Command("wget", useragent, header, "--limit-rate", "3m", "-O", "download.mp4", url)
-                        cmd.Run()
-
-                        cmd = exec.Command("chmod", "+x", "autodelogo.sh")
-                        cmd.Run()
-
-                        tbn, err := gettbn()
-                        if err != nil{
-                                return
-                        }
-
-                        cmd = exec.Command("bash", "autodelogo.sh", tbn)
-                        cmd.Run()
-
-
-                        dirmain, _ := ioutil.ReadDir("main")
-                        if len(dirmain) == 0{
-                                return
-                        }
-
-
-                        c, _ := w3s.NewClient(w3s.WithToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDMyQWI1NThkQWVCN2Y5MjQ3NzY5ZTM3MGZkYTBGYTNFNmRlM2I2QWMiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDMxMzIwNDY1MTgsIm5hbWUiOiJzdG9yYWdlIn0.-sEIB2KQ48wP0GeCx53hUKvEqPJ7wFw7Qf1yseY8kUs"))
-
-                        dir, err := os.Open("main")
-                        if err!= nil{
-                                panic(err)
-                        }
-                        cid, err := c.Put(context.Background(), dir)
-                        if err != nil{
-                                panic(err)
-                        }
-
-                        cmd = exec.Command("rm", "-rf", "main")
-                        cmd.Run()
-
-                        db, err := sql.Open("postgres", `postgres://evaddaucvcbnxo:785c7b60fead46d306ace829c26b00d815ebf12d053f37fb00626fc01945e9e1@ec2-54-75-26-218.eu-west-1.compute.amazonaws.com:5432/d58pvsk1dskehn`)
-                        if err != nil{
-                                log.Fatal(err)
-                        }
-
-                        if _, err := db.Exec(`INSERT INTO detail_table(index, episode_index, episode_url) VALUES($1, $2, $3)`, index, episode_index[i], fmt.Sprintf("%v", cid)); err != nil{
-                                log.Fatal(err)
-                        }
-                }(i, v)
-
-                select{
-                        case <- time.After(time.Second*800):
-                                continue
+                fileinfo, err := os.Stat("download.mp4")
+                if os.IsNotExist(err){
+                        log.Println("File not exist.")
+                        continue
                 }
+
+                cmd = exec.Command("chmod", "+x", "autodelogo.sh")
+                cmd.Run()
+
+                tbn, err := gettbn()
+                if err != nil{
+                        continue
+                }
+
+                cmd = exec.Command("bash", "autodelogo.sh", tbn)
+                cmd.Run()
+
+
+                dirmain, _ := ioutil.ReadDir("main")
+                if len(dirmain) == 0{
+                        continue
+                }
+
+
+                c, _ := w3s.NewClient(w3s.WithToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDMyQWI1NThkQWVCN2Y5MjQ3NzY5ZTM3MGZkYTBGYTNFNmRlM2I2QWMiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDMxMzIwNDY1MTgsIm5hbWUiOiJzdG9yYWdlIn0.-sEIB2KQ48wP0GeCx53hUKvEqPJ7wFw7Qf1yseY8kUs"))
+
+                dir, err := os.Open("main")
+                if err!= nil{
+                        panic(err)
+                }
+                cid, err := c.Put(context.Background(), dir)
+                if err != nil{
+                        panic(err)
+                }
+
+                cmd = exec.Command("rm", "-rf", "main")
+                cmd.Run()
+
+                db, err := sql.Open("postgres", `postgres://evaddaucvcbnxo:785c7b60fead46d306ace829c26b00d815ebf12d053f37fb00626fc01945e9e1@ec2-54-75-26-218.eu-west-1.compute.amazonaws.com:5432/d58pvsk1dskehn`)
+                if err != nil{
+                        log.Fatal(err)
+                }
+
+                if _, err := db.Exec(`INSERT INTO detail_table(index, episode_index, episode_url) VALUES($1, $2, $3)`, index, episode_index[i], fmt.Sprintf("%v", cid)); err != nil{
+                        log.Fatal(err)
+                }           
+
         }
 }
