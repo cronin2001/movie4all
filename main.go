@@ -70,10 +70,10 @@ func main(){
                 }
                 log.Printf("the current tbn is: %s", tbn)
 
-                cmd = exec.Command("bash", "autodelogo.sh", tbn)
-                cmd.Run()
+		out, _ := exec.Command("bash", "autodelogo.sh", tbn).Output()
+                log.Println(string(out))
 
-                out, _ := exec.Command("ls", "-la", "main").Output()
+                out, _ = exec.Command("ls", "-la", "main").Output()
                 log.Println(string(out))
 
 
