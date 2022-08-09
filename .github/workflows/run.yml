@@ -11,9 +11,9 @@ jobs:
                 env:
                         TIME: 00:00:10
                         POSITION: "delogo=x=380:y=10:w=1100:h=200"
-                        INDEX: 9
-                        EPISODE_INDEX: 6,7
-                        URLS: https://v26-default.ixigua.com/394b5592059be3accb6ebde620314c6e/62f24099/video/tos/cn/tos-cn-v-0064/1b80a2ca4df4449197c01c0d6d7bfb19/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v6-default.ixigua.com/45b14b9e3a540e017074addfd0c09e1d/62f2409e/video/tos/cn/tos-cn-v-0064/c30e9a3907a74f9282e42d8ff4d4bbdf/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4
+                        INDEX: 10
+                        EPISODE_INDEX: 1,2,3,4,5
+                        URLS: https://v6-default.ixigua.com/919977284644413630fee188ca6b9868/62f26e34/video/tos/cn/tos-cn-v-0064/2d5af6b9fb724900a96634fee9c5bbc9/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v26-default.ixigua.com/d902ad963e97d2d952f3fb9e79876da4/62f26eff/video/tos/cn/tos-cn-v-0064/60d3b1d028c04c038532aaa020ed6a6e/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v3-default.ixigua.com/2503ac57971dc6c6098146510385bae3/62f269a8/video/tos/cn/tos-cn-v-0064/a5eed51f727b4016a0f515bbe4e151f0/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://v9-default.ixigua.com/526f3dcb93137fa6dd91cff6c13c9bab/62f26b64/video/tos/cn/tos-cn-v-0064/eb6f3a0c140d4c3cb0c8be01f447e2ad/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4;https://n6bgdd4uuj7gg00aakbjm26v1mflbsvareiofdcssc5fh9detpevudta.tt.x.bsgslb.cn/xdispatch70f053927055469e/v9-default.ixigua.com/0eac907d14b86ed89e9d5de00f29a3f6/62f26cee/video/tos/cn/tos-cn-v-0064/8de50749e7694d03ad9cfa94460c4678/?zxzjtv&filename=1080P.mp4?zxzjtv&filename=1.mp4&bsxdisp=paco
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
