@@ -55,7 +55,15 @@ func main(){
 
         for i, v := range urls{
 
+
                 cmd := exec.Command("chmod", "+x", "autodelogo.sh")
+                cmd.Run()
+
+                log.Println(v)
+                cmd = exec.Command("wget", "-O", "download.mp4", v)
+                cmd.Run()
+
+                cmd = exec.Command("ls", "-la")
                 cmd.Run()
 
                 tbn, err := gettbn()
@@ -63,7 +71,7 @@ func main(){
                         continue
                 }
 
-                cmd = exec.Command("bash", "autodelogo.sh", v, tbn)
+                cmd = exec.Command("bash", "autodelogo.sh", tbn)
                 cmd.Run()
 
 
