@@ -79,6 +79,7 @@ func main(){
 
                 dirmain, _ := ioutil.ReadDir("main")
                 if len(dirmain) == 0{
+                        log.Println("the folder's empty")
                         continue
                 }
 
