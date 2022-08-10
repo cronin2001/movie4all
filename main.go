@@ -27,7 +27,7 @@ func gettbn()(string, error){
         ctx, cancelFn := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancelFn()
 
-	fileReader, err := os.Open("download.mp4")
+	fileReader, err := os.Open("tmp2.mp4")
 	if err != nil {
 		log.Printf("Error opening test file: %v", err)
 	}
@@ -64,20 +64,26 @@ func main(){
 
                 cmd := exec.Command("chmod", "+x", "autodelogo.sh")
                 cmd.Run()
+		cmd = exec.Command("chmod", "+x", "autoconvert.sh")
+                cmd.Run()
 
                 log.Printf("downloading: %s\n", v);
                 cmd = exec.Command("wget", "--timeout=30", "-O", "download.mp4", v)
                 cmd.Run()
 
+		
+		cmd = exec.Command("bash", "autodelogo.sh")
+                cmd.Run()
 
                 tbn, err := gettbn()
                 if err != nil{
                         continue
                 }
                 log.Printf("the current tbn is: %s", tbn)
-
-		cmd = exec.Command("bash", "autodelogo.sh", tbn)
+		
+		cmd = exec.Command("bash", "autoconvert.sh", tbn)
                 cmd.Run()
+		
 
                 dirmain, _ := ioutil.ReadDir("main")
                 if len(dirmain) == 0{
