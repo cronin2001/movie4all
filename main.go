@@ -73,10 +73,6 @@ func main(){
 		out, _ := exec.Command("bash", "autodelogo.sh", tbn).Output()
                 log.Println(string(out))
 
-                out, _ = exec.Command("ls", "-la", "main").Output()
-                log.Println(string(out))
-
-
                 dirmain, _ := ioutil.ReadDir("main")
                 if len(dirmain) == 0{
                         log.Println("the folder's empty")
