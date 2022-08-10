@@ -60,7 +60,7 @@ func main(){
                 cmd.Run()
 
                 log.Printf("downloading: %s\n", v);
-                cmd = exec.Command("wget", "-O", "download.mp4", v)
+                cmd = exec.Command("wget", "--timeout=30", "-O", "download.mp4", v)
                 cmd.Run()
 
 
