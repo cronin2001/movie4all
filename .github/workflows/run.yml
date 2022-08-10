@@ -11,10 +11,10 @@ jobs:
                 env:
                         PROXIES: movie4all-proxy1;movie4all-proxy2;movie4all-proxy3;movie4all-proxy4;movie4all-proxy5
                         TIME: 00:00:10
-                        POSITION: "delogo=x=10:y=10:w=10:h=10"
-                        INDEX: 12
-                        EPISODE_INDEX: 1,2,3,4,5,6
-                        URLS: https://v26-default.ixigua.com/72c722bd3bad4383734f545bb192fcce/62f34ab6/video/tos/cn/tos-cn-v-0064/05dbfae62d6f4907b07d9c2804330206/?tg=?zxzj.vip&filename=540P.mp4;https://v26-default.ixigua.com/411a81944b194c29b9096cf98c6b8869/62f34a2c/video/tos/cn/tos-cn-v-0064/61db4386bd4649ca8086fe56a038ea5b/?tg=?zxzj.vip&filename=540P.mp4;https://v3-default.ixigua.com/70892a9549ef4aac6c1892b335320965/62f34a0c/video/tos/cn/tos-cn-v-0064/6f90040f1e9f43b29040dcbe7b3047d2/?tg=?zxzj.vip&filename=540P.mp4;https://v3-default.ixigua.com/0506477702a87ab56f0051c49572bdfd/62f34a62/video/tos/cn/tos-cn-v-0064/04a44a3a0e7f405bbd84e6321441c6f6/?tg=?zxzj.vip&filename=540P.mp4;https://v6-default.ixigua.com/9900e896aed46c6a0479d03af62f08ca/62f34a4f/video/tos/cn/tos-cn-v-0064/d441790ce4f646a6a948fd7feeb07ce0/?tg=?zxzj.vip&filename=540P.mp4;https://v26-default.ixigua.com/8e45b1ffdf3ef22761c704508f4080b4/62f34814/video/tos/cn/tos-cn-v-0064/1987ed38f6ed463b85d159ce7aa9673e/?tg=?zxzj.vip&filename=540P.mp4
+                        POSITION: "delogo=x=380:y=10:w=1100:h=200"
+                        INDEX: 10
+                        EPISODE_INDEX: 9,10,11
+                        URLS: https://v26-default.ixigua.com/cb6b2c29b8f85638d7f645a7e24ebfb9/62f35505/video/tos/cn/tos-cn-v-0064/1e83028a60954928af30643ff22909f5/?tg=?zxzj.vip&filename=1080P.mp4;https://v26-default.ixigua.com/91ee599a58ab1f0a6f6453219a9b2cda/62f3529a/video/tos/cn/tos-cn-v-0064/233dc5a405ee49cb8063aa6a01ec082d/?tg=?zxzj.vip&filename=1080P.mp4;https://v6-default.ixigua.com/5ec17a476a2debb7b06045176a8c1729/62f353ff/video/tos/cn/tos-cn-v-0064/71df7c21015f4cc693b7cf3e4189cc83/?tg=?zxzj.vip&filename=1080P.mp4
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
