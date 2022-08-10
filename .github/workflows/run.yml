@@ -13,8 +13,8 @@ jobs:
                         TIME: 00:00:10
                         POSITION: "delogo=x=380:y=25:w=1100:h=220"
                         INDEX: 20
-                        EPISODE_INDEX: 1,2,3,4,5,6
-                        URLS: https://v3-default.ixigua.com/4748c49fd135064a06227487cf44a3b8/62f3dfc6/video/tos/cn/tos-cn-v-0064/3efe3b2b754842348c039f0def9fac2d/?tg=?zxzj.vip&filename=1080P.mp4;https://v6-default.ixigua.com/9188511541fdb104c9ef56daaed5dd97/62f3dfbf/video/tos/cn/tos-cn-v-0064/572a4d0cfaf4456ba1c348ffe62f2b0b/?tg=?zxzj.vip&filename=1080P.mp4;https://07telbpv4j2ecbegp5u51ncpar9e554bvtlln3tpg28uus89vesfveqi.tt.x.bsgslb.cn/xdispatch70f05392d35b4c3b/v9-default.ixigua.com/a912c7d4c736a075bfc6ceb64b09c0b3/62f3de45/video/tos/cn/tos-cn-v-0064/b903b2e73d5b45d99eb53217a003c56d/?tg=?zxzj.vip&filename=1080P.mp4&bsxdisp=paco;https://v26-default.ixigua.com/ec33c627567fa2fca5a9392f1502de15/62f3df70/video/tos/cn/tos-cn-v-0064/5c231d45938e4d11a9ca008ad3ffaf35/?tg=?zxzj.vip&filename=1080P.mp4;https://v26-default.ixigua.com/f209bc78ad255fe33a3fcab766ad5352/62f3dfc7/video/tos/cn/tos-cn-v-0064/65e0907e40504185b6248baea37ab837/?tg=?zxzj.vip&filename=1080P.mp4;https://v3-default.ixigua.com/5058d4e40c44f0b410a3a70d61e87aba/62f3df7f/video/tos/cn/tos-cn-v-0064/220d74f9087746e99ca235d1ce660c6d/?tg=?zxzj.vip&filename=1080P.mp4
+                        EPISODE_INDEX: 7,8,9,10
+                        URLS: https://v9-default.ixigua.com/dc2409e37084c6fb30a8db12c083248c/62f3e75e/video/tos/cn/tos-cn-v-0064/b9df1f03b0a64b2fa6adb338e24f1df1/?tg=?zxzj.vip&filename=1080P.mp4;https://v9-default.ixigua.com/f95c72253fa7b4791a71f1eb7a2ee405/62f3e84a/video/tos/cn/tos-cn-v-0064/e5d1f1e1e439442bbfb036414e3905aa/?tg=?zxzj.vip&filename=1080P.mp4;https://v26-default.ixigua.com/89ba01390e8d9a2c354059ba08a98df5/62f3e837/video/tos/cn/tos-cn-v-0064/b202dcf755964fe6b5ab84fb3d3ef785/?tg=?zxzj.vip&filename=1080P.mp4;https://v6-default.ixigua.com/c10c8d9808369fdfce137388071915da/62f3ea93/video/tos/cn/tos-cn-v-0064/f3b60e46bbe04f28b4ecff578fb4dff8/?tg=?zxzj.vip&filename=1080P.mp4
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
