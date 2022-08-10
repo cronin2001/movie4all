@@ -11,10 +11,10 @@ jobs:
                 env:
                         PROXIES: movie4all-proxy1;movie4all-proxy2;movie4all-proxy3;movie4all-proxy4;movie4all-proxy5
                         TIME: 00:00:10
-                        POSITION: "delogo=x=380:y=15:w=1100:h=220"
-                        INDEX: 16
-                        EPISODE_INDEX: 13,14,15
-                        URLS: https://v26-default.ixigua.com/68d26873b7e41d4feaa3fe34757f87e1/62f3c5c7/video/tos/cn/tos-cn-v-0064/d12f933866754b08a933780f8fef91cb/?tg=?zxzj.vip&filename=1080P.mp4;https://b57httotov5jvljnitq35c0rdp8ots1mg3tmors881epks2hoq2fu2r4.tt.x.bsgslb.cn/xdispatch70f053927c848a71/v9-default.ixigua.com/4174266de5b29c7420dfcd137c0011e9/62f3c687/video/tos/cn/tos-cn-v-0064/979c43b4d4c34267824275d642d40478/?tg=?zxzj.vip&filename=1080P.mp4&bsxdisp=paco;https://j3vrn7okq5qkflpmhjqr5rt8s3fl6msmo0c96dv32ldnvd7agdnvu3g6.tt.x.bsgslb.cn/xdispatch70f053927c848a71/v9-default.ixigua.com/f444eb3846ad3bfc3bf0cd48cc1a3c49/62f3c698/video/tos/cn/tos-cn-v-0064/e13dd0a055d6493d8ce3a4e33aa33eea/?tg=?zxzj.vip&filename=1080P.mp4&bsxdisp=paco
+                        POSITION: "delogo=x=38:y=15:w=110:h=22"
+                        INDEX: 17
+                        EPISODE_INDEX: 1,2,3,4,5,6,7,8,9
+                        URLS: https://v9-default.ixigua.com/c19713cb35b5ea76ee2172ed151e86df/62f3c191/video/tos/cn/tos-cn-v-0064/22170445b106416fa5da5a0d2f5ae2bd/?tg=?zxzj.vip&filename=1080P.mp4;https://v26-default.ixigua.com/f6eb6dd61a16a1b29b9cdede2f15995e/62f3c317/video/tos/cn/tos-cn-v-0064/3f2e5d66c4a94b97a42447cc097bea49/?tg=?zxzj.vip&filename=1080P.mp4;https://44fd8p345tnjtd9vsk7s01fbfo1e9hs16nk0d7blsv6jjre5vfjvv1tk.tt.x.bsgslb.cn/xdispatch70f05392d35b4c3d/v9-default.ixigua.com/2a4c965182862fea8715073f861b219e/62f3c35f/video/tos/cn/tos-cn-v-0064/82bb3a27ad05417e97e828a3c31ffaf1/?tg=?zxzj.vip&filename=1080P.mp4&bsxdisp=paco;https://v9-default.ixigua.com/b04ea5d5d90bc6d7fc6fdc10b98019c6/62f3c214/video/tos/cn/tos-cn-v-0064/dd71fc5c8c3843e5bbf3e61849b22267/?tg=?zxzj.vip&filename=1080P.mp4;https://v3-default.ixigua.com/5d4f5d4f8c6b80763ba4c096bbe7ec0f/62f3c1ca/video/tos/cn/tos-cn-v-0064/f607c72ba4cc443fa7d79028178aba30/?tg=?zxzj.vip&filename=1080P.mp4;https://v26-default.ixigua.com/97934926be57e00151ac4d90d54b6a8f/62f3c325/video/tos/cn/tos-cn-v-0064/85397344d47f47b8aff0677bbd7e9269/?tg=?zxzj.vip&filename=1080P.mp4;https://v26-default.ixigua.com/3aef44d5241214045146ae3f7265f980/62f3c298/video/tos/cn/tos-cn-v-0064/095b98d6e3a94e7d88c26d61bd508e16/?tg=?zxzj.vip&filename=1080P.mp4;https://v6-default.ixigua.com/f3aae7a995b109fca94153a5fedf2e00/62f3c3ae/video/tos/cn/tos-cn-v-0064/2ab2ccbb1a564ce985124c515fa813d0/?tg=?zxzj.vip&filename=1080P.mp4;https://v6-default.ixigua.com/d56ac6b145c31bd0d14865e9fb7dd888/62f3c2a4/video/tos/cn/tos-cn-v-0064/539739d0ea3d474588c49425e4f4c59b/?tg=?zxzj.vip&filename=1080P.mp4
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
