@@ -11,7 +11,7 @@ jobs:
                 env:
                         PROXIES: movie4all-proxy1;movie4all-proxy2;movie4all-proxy3;movie4all-proxy4;movie4all-proxy5
                         TIME: 00:00:10
-                        POSITION: "delogo=x=380:y=25:w=1100:h=220"
+                        POSITION: "delogo=x=380:y=20:w=1100:h=220"
                         INDEX: 21
                         EPISODE_INDEX: 1,2,3,4
                         URLS: https://v3-default.ixigua.com/51f980ce69bd8cbe81fca819b5c6981e/62f3f526/video/tos/cn/tos-cn-v-0064/da94e2094bde4272a20508b48f0812d7/?tg=?zxzj.vip&filename=1080P.mp4;https://v3-default.ixigua.com/2be8f79ec944907ae968c044a5dcc06b/62f3f3de/video/tos/cn/tos-cn-v-0064/04f35581c0b143909c1e240053e8ae7d/?tg=?zxzj.vip&filename=1080P.mp4;https://v6-default.ixigua.com/ffeb699b0b1f42b31ab497a51e87825e/62f3f43e/video/tos/cn/tos-cn-v-0064/cc8fa7bc79004d24bfec6c197ee7dc49/?tg=?zxzj.vip&filename=1080P.mp4;https://v26-default.ixigua.com/ec927a20fdc59a6d6e8eb987232fc494/62f3f416/video/tos/cn/tos-cn-v-0064/e88ed5182292470db7719d9fe5d7b00f/?tg=?zxzj.vip&filename=1080P.mp4
