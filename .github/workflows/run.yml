@@ -13,8 +13,8 @@ jobs:
                         TIME: 00:00:10
                         POSITION: "delogo=x=380:y=15:w=1100:h=220"
                         INDEX: 16
-                        EPISODE_INDEX: 7,8,9,10,11,12
-                        URLS: https://v26-default.ixigua.com/1984138f905a6ce070d523a7df05cb9e/62f3c20e/video/tos/cn/tos-cn-v-0064/c86906f4f7514722aba3d5eefa3b096c/?tg=?zxzj.vip&filename=1080P.mp4;https://v6-default.ixigua.com/bb68038c36d388f7077a45066fa044f2/62f3c1ea/video/tos/cn/tos-cn-v-0064/4f149aa6713b4d879f6fe418440c2b9f/?tg=?zxzj.vip&filename=1080P.mp4;https://v26-default.ixigua.com/9ee1da26a1e3469433a86f824684b208/62f3c1ff/video/tos/cn/tos-cn-v-0064/3fa0878473124dcd9b0ec79a4b5b8e0b/?tg=?zxzj.vip&filename=1080P.mp4;https://v6-default.ixigua.com/89fa15add825d0a68353d785a424103e/62f3c201/video/tos/cn/tos-cn-v-0064/ecd490b8783a4c488dea5ff1ad3505e5/?tg=?zxzj.vip&filename=1080P.mp4;https://v3-default.ixigua.com/97404ed6a5fe1a5306fd49c862149172/62f3c200/video/tos/cn/tos-cn-v-0064/6ab64c36cf2c41aea609a24a08704c62/?tg=?zxzj.vip&filename=1080P.mp4;https://v6-default.ixigua.com/0d08c6485e68e346a6712d4e8a668198/62f3c202/video/tos/cn/tos-cn-v-0064/3b3cebf498bf417b9db11d2af6387fcb/?tg=?zxzj.vip&filename=1080P.mp4
+                        EPISODE_INDEX: 13,14,15
+                        URLS: https://v26-default.ixigua.com/68d26873b7e41d4feaa3fe34757f87e1/62f3c5c7/video/tos/cn/tos-cn-v-0064/d12f933866754b08a933780f8fef91cb/?tg=?zxzj.vip&filename=1080P.mp4;https://b57httotov5jvljnitq35c0rdp8ots1mg3tmors881epks2hoq2fu2r4.tt.x.bsgslb.cn/xdispatch70f053927c848a71/v9-default.ixigua.com/4174266de5b29c7420dfcd137c0011e9/62f3c687/video/tos/cn/tos-cn-v-0064/979c43b4d4c34267824275d642d40478/?tg=?zxzj.vip&filename=1080P.mp4&bsxdisp=paco;https://j3vrn7okq5qkflpmhjqr5rt8s3fl6msmo0c96dv32ldnvd7agdnvu3g6.tt.x.bsgslb.cn/xdispatch70f053927c848a71/v9-default.ixigua.com/f444eb3846ad3bfc3bf0cd48cc1a3c49/62f3c698/video/tos/cn/tos-cn-v-0064/e13dd0a055d6493d8ce3a4e33aa33eea/?tg=?zxzj.vip&filename=1080P.mp4&bsxdisp=paco
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
