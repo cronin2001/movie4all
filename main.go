@@ -98,6 +98,7 @@ func main(){
                 if err != nil{
                         log.Fatal(err)
                 }
+		defer db.Close()
 
                 if _, err := db.Exec(`INSERT INTO detail_table(index, episode_index, episode_url) VALUES($1, $2, $3)`, index, episode_index[i], fmt.Sprintf("%v", cid)); err != nil{
                         log.Fatal(err)
