@@ -76,7 +76,7 @@ func handle(url string){
     cmd.Run()
 
     log.Printf("downloading: %s\n", url);
-    cmd = exec.Command("wget", "--timeout=30", "-O", "download.mp4", v)
+    cmd = exec.Command("wget", "--timeout=30", "-O", "download.mp4", url)
     cmd.Run()
 
 		
