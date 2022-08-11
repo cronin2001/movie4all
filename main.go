@@ -135,7 +135,9 @@ func main(){
 
 	for{
 
-		client := &http.Client{}
+		client := &http.Client{
+			Timeout: 10*time.Second,
+		}
 
 		req, _ := http.NewRequest("GET", start+fmt.Sprintf("%v", count)+`.html`, nil)
 
