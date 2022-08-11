@@ -165,6 +165,10 @@ func main(){
 		}else{
 				fmt.Printf("%+v\n", res)
 		}
+		
+		if res.URL == ""{
+			continue
+		}
 
 		if res.FROM == "dpp"{
 			req, _ = http.NewRequest("GET", "https://jx.zxzj.vip/dplayer.php?url="+res.URL, nil)
