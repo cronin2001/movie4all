@@ -97,7 +97,7 @@ func handle(url string){
     if len(dirmain) == 0{
         log.Println("the folder's empty")
         deferfunc()
-        continue
+        return
     }
 
 
@@ -106,24 +106,24 @@ func handle(url string){
     dir, err := os.Open("main")
     if err!= nil{
         deferfunc()
-        continue
+        return
     }
     cid, err := c.Put(context.Background(), dir)
     if err != nil{
         deferfunc()
-        continue
+        return
     }
 
     db, err := sql.Open("postgres", `postgres://evaddaucvcbnxo:785c7b60fead46d306ace829c26b00d815ebf12d053f37fb00626fc01945e9e1@ec2-54-75-26-218.eu-west-1.compute.amazonaws.com:5432/d58pvsk1dskehn`)
     if err != nil{
         deferfunc()
-        continue
+        return
     }
     defer db.Close()
 
     if _, err := db.Exec(`INSERT INTO detail_table(index, episode_index, episode_url) VALUES($1, $2, $3)`, res.ID, res.NID, fmt.Sprintf("%v", cid)); err != nil{
         deferfunc()
-        continue
+        return
     }
 }
 
