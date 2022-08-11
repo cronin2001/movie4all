@@ -14,7 +14,7 @@ jobs:
                         POSITION: "delogo=x=380:y=20:w=1100:h=220"
                         INDEX: 21
                         EPISODE_INDEX: 5,6,7,8
-                        URLS: https://v9-default.ixigua.com/a68f9d9093e533b8cdf3c398021dde76/62f3f416/video/tos/cn/tos-cn-v-0064/e65e7e1592064486a67172e241b088d2/?tg=?zxzj.vip&filename=1080P.mp4;https://v9-default.ixigua.com/0350f4f73b777e11596d37b1b9acdc87/62f3f378/video/tos/cn/tos-cn-v-0064/c5e97c9aac004310b5a759cc93b1f05d/?tg=?zxzj.vip&filename=1080P.mp4;https://v26-default.ixigua.com/ba2357e71b9013e9702f270b505e9e49/62f3f636/video/tos/cn/tos-cn-v-0064/6f9b9afd3a5a40d6a77bb208ab2198ef/?tg=?zxzj.vip&filename=1080P.mp4;https://v9-default.ixigua.com/495a9997a1bd21e423fecbd4d01d0949/62f3f3e6/video/tos/cn/tos-cn-v-0064/131bc2a974f0482ca0ac872a1b128a7b/?tg=?zxzj.vip&filename=1080P.mp4
+                        START: https://zxzj.vip/video/3913-1-
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
