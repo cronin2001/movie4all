@@ -8,6 +8,15 @@ import (
         "net/http"
         "io/ioutil"
 	"os"
+	"os/exec"
+	"github.com/web3-storage/go-w3s-client"
+	"context"
+	"database/sql"
+	"strings"
+	"time"
+	"gopkg.in/vansante/go-ffprobe.v2"
+
+	_ "github.com/lib/pq"
 )
 
 
