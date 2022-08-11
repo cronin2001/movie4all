@@ -9,12 +9,7 @@ jobs:
                 runs-on: ubuntu-latest
 
                 env:
-                        PROXIES: movie4all-proxy1;movie4all-proxy2;movie4all-proxy3;movie4all-proxy4;movie4all-proxy5
-                        TIME: 00:00:10
-                        POSITION: "delogo=x=380:y=20:w=1100:h=220"
-                        INDEX: 21
-                        EPISODE_INDEX: 5,6,7,8
-                        START: https://zxzj.vip/video/3913-1-
+                        START: https://zxzj.vip/video/3866-1-
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
