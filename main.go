@@ -85,7 +85,7 @@ func handle(url string){
 
     tbn, err := gettbn()
     if err != nil{
-        continue
+        return
     }
     log.Printf("the current tbn is: %s", tbn)
 		
