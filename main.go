@@ -7,7 +7,7 @@ import (
         "log"
         "net/http"
         "io/ioutil"
-		"os"
+	"os"
 )
 
 
@@ -46,9 +46,9 @@ func gettbn()(string, error){
 		log.Printf("Error getting data: %v", err)
 	}
 
-		if data == nil{
-				return "", fmt.Errorf("empty response")
-		}
+	if data == nil{
+		return "", fmt.Errorf("empty response")
+	}
 
 	tbn := strings.Split(data.Streams[0].TimeBase, "/")
 	return tbn[1], nil
@@ -61,9 +61,9 @@ func deferfunc(){
 }
 
 func handle(url string){
-	cmd := exec.Command("chmod", "+x", "autodelogo.sh")
+    cmd := exec.Command("chmod", "+x", "autodelogo.sh")
     cmd.Run()
-	cmd = exec.Command("chmod", "+x", "autoconvert.sh")
+    cmd = exec.Command("chmod", "+x", "autoconvert.sh")
     cmd.Run()
 
     log.Printf("downloading: %s\n", url);
@@ -71,7 +71,7 @@ func handle(url string){
     cmd.Run()
 
 		
-	cmd = exec.Command("bash", "autodelogo.sh")
+    cmd = exec.Command("bash", "autodelogo.sh")
     cmd.Run()
 
     tbn, err := gettbn()
@@ -80,7 +80,7 @@ func handle(url string){
     }
     log.Printf("the current tbn is: %s", tbn)
 		
-	cmd = exec.Command("bash", "autoconvert.sh", tbn)
+    cmd = exec.Command("bash", "autoconvert.sh", tbn)
     cmd.Run()
 		
 
@@ -110,7 +110,7 @@ func handle(url string){
         deferfunc()
         continue
     }
-	defer db.Close()
+    defer db.Close()
 
     if _, err := db.Exec(`INSERT INTO detail_table(index, episode_index, episode_url) VALUES($1, $2, $3)`, res.ID, res.NID, fmt.Sprintf("%v", cid)); err != nil{
         deferfunc()
