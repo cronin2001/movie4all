@@ -10,7 +10,7 @@ jobs:
 
                 env:
                         TIME: 00:00:10
-                        POSITION: "delogo=x=38:y=25:w=110:h=22"
+                        POSITION: "delogo=x=64:y=2:w=560:h=64"
                         START: https://zxzj.vip/video/3821-1-
                 steps:
                 - name: setup go
