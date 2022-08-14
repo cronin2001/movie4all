@@ -101,7 +101,7 @@ func handle(url string){
     }
 
 
-    c, _ := w3s.NewClient(w3s.WithToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDMyQWI1NThkQWVCN2Y5MjQ3NzY5ZTM3MGZkYTBGYTNFNmRlM2I2QWMiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDMxMzIwNDY1MTgsIm5hbWUiOiJzdG9yYWdlIn0.-sEIB2KQ48wP0GeCx53hUKvEqPJ7wFw7Qf1yseY8kUs"))
+    c, _ := w3s.NewClient(w3s.WithToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGMwZkJmQUFBMDE5NzE2MmU1MkIxNTE1NjU0MjBlMTNmQzI4MWE1N2YiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjA0NDk0MjAxNjEsIm5hbWUiOiJ3ZWIzc3RvcmFnZSJ9.zjm4hKAtg42PiBDROvNrVXaX_NojTKkXg9E_6tv5zR8"))
 
     dir, err := os.Open("main")
     if err!= nil{
