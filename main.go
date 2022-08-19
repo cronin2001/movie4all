@@ -1,12 +1,12 @@
 package main
 
 import (
-        "fmt"
-        "regexp"
-        "encoding/json"
-        "log"
-        "net/http"
-        "io/ioutil"
+    "fmt"
+    "regexp"
+    "encoding/json"
+    "log"
+    "net/http"
+    "io/ioutil"
 	"os"
 	"os/exec"
 	"github.com/web3-storage/go-w3s-client"
@@ -79,8 +79,19 @@ func handle(url string){
     cmd = exec.Command("wget", "--timeout=30", "-O", "download.mp4", url)
     cmd.Run()
 
+
+	var position string
+	
+	if size := strings.Contains(url, "540P"); size{
+		position = "delogo=x=64:y=2:w=560:h=54"
+	}else if size := strings.Contains(url, "720P"); size{
+		position = "delogo=x=64:y=2:w=650:h=80"
+	}else{
+		position = "delogo=x=380:y=20:w=1100:h=225"
+	}
+
 		
-    cmd = exec.Command("bash", "autodelogo.sh")
+    cmd = exec.Command("bash", "autodelogo.sh", position)
     cmd.Run()
 
     tbn, err := gettbn()
@@ -101,7 +112,7 @@ func handle(url string){
     }
 
 
-    c, _ := w3s.NewClient(w3s.WithToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGMwZkJmQUFBMDE5NzE2MmU1MkIxNTE1NjU0MjBlMTNmQzI4MWE1N2YiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjA0NDk0MjAxNjEsIm5hbWUiOiJ3ZWIzc3RvcmFnZSJ9.zjm4hKAtg42PiBDROvNrVXaX_NojTKkXg9E_6tv5zR8"))
+    c, _ := w3s.NewClient(w3s.WithToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDMyQWI1NThkQWVCN2Y5MjQ3NzY5ZTM3MGZkYTBGYTNFNmRlM2I2QWMiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDMxMzIwNDY1MTgsIm5hbWUiOiJzdG9yYWdlIn0.-sEIB2KQ48wP0GeCx53hUKvEqPJ7wFw7Qf1yseY8kUs"))
 
     dir, err := os.Open("main")
     if err!= nil{
