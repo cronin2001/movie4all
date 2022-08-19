@@ -11,7 +11,7 @@ jobs:
                 env:
                         TIME: 00:00:10
                         POSITION: "delogo=x=380:y=20:w=1100:h=225"
-                        START: https://zxzj.vip/video/3568-1-
+                        START: https://zxzj.vip/video/3575-1-
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
