@@ -9,4 +9,4 @@ rm -rf download.mp4
 
 echo ------------------delogoing------------------------
 # "delogo=x=432:y=44:w=1060:h=108"
-ffmpeg -i tmp1.mp4 -vf $POSITION -c:a copy tmp3.mp4
+ffmpeg -i tmp1.mp4 -vf $1 -c:a copy tmp3.mp4
