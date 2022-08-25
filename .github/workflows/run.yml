@@ -12,7 +12,7 @@ jobs:
                         TIME: 00:00:10
                         MODE: all
                         COUNT: 1
-                        START: https://zxzj.vip/video/3233-1-
+                        START: https://zxzj.vip/video/3540-1-
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
