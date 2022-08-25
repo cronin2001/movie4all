@@ -7,14 +7,15 @@ import (
     "log"
     "net/http"
     "io/ioutil"
-	"os"
-	"os/exec"
-	"github.com/web3-storage/go-w3s-client"
-	"context"
-	"database/sql"
-	"strings"
-	"time"
-	"gopkg.in/vansante/go-ffprobe.v2"
+    "os"
+    "os/exec"
+    "github.com/web3-storage/go-w3s-client"
+    "context"
+    "database/sql"
+    "strings"
+    "time"
+    "strconv"
+    "gopkg.in/vansante/go-ffprobe.v2"
 
 	_ "github.com/lib/pq"
 )
@@ -141,7 +142,7 @@ func handle(url string){
 func main(){
 
 
-	var count int = 1
+	count, _ := strconv.Atoi(os.Getenv("count"))
 	start := os.Getenv("START")
 
 	for{
