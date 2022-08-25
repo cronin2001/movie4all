@@ -10,8 +10,8 @@ jobs:
 
                 env:
                         TIME: 00:00:10
-                        COUNT: 10
-                        POSITION: "delogo=x=380:y=20:w=1100:h=225"
+                        MODE: all
+                        COUNT: 1
                         START: https://zxzj.vip/video/3233-1-
                 steps:
                 - name: setup go
