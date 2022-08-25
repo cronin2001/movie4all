@@ -142,7 +142,7 @@ func handle(url string){
 func main(){
 
 
-	count, _ := strconv.Atoi(os.Getenv("count"))
+	count, _ := strconv.Atoi(os.Getenv("COUNT"))
 	start := os.Getenv("START")
 
 	for{
