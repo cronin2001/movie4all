@@ -11,7 +11,7 @@ jobs:
                 env:
                         TIME: 00:00:10
                         MODE: all
-                        COUNT: 1
+                        COUNT: 3
                         START: https://zxzj.vip/video/3540-1-
                 steps:
                 - name: setup go
