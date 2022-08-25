@@ -274,8 +274,9 @@ func main() {
 	}
 
 	//再次尝试失败
-	for _, v := range failed {
+	f := make([]string, len(failed))
+	copy(f, failed)
+	for _, v := range f {
 		dispatch(v)
 	}
-
 }
