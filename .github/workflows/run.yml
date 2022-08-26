@@ -10,8 +10,9 @@ jobs:
 
                 env:
                         TIME: 00:00:10
-                        MODE: all
-                        COUNT: 7
+                        MODE: partly
+                        LISTS: 8,9
+                        COUNT: 1
                         START: https://zxzj.vip/video/3540-1-
                 steps:
                 - name: setup go
