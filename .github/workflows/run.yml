@@ -10,10 +10,10 @@ jobs:
 
                 env:
                         TIME: 00:00:10
-                        MODE: partly
+                        MODE: all
                         LISTS: 4,5
                         COUNT: 1
-                        START: https://zxzj.vip/video/3347-1-
+                        START: https://zxzj.vip/video/3026-1-
                 steps:
                 - name: setup go
                   uses: actions/checkout@v2
